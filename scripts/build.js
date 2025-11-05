@@ -11,9 +11,9 @@ fs.mkdirSync(outDir, { recursive: true });
 function renderProduct(p) {
   function li(items) { return items.map(i => `<li>${i}</li>`).join(''); }
   const related = products.filter(r => r.id !== p.id).slice(0,3).map(r => `
-    <a href="/products/${r.id}.html" class="card overflow-hidden">
+    <a href="${r.id}.html" class="card overflow-hidden">
       <figure class="aspect-[4/5] overflow-hidden product-figure">
-        <img src="/${r.image_url}" alt="${r.name.en}" class="w-full h-full object-cover" />
+        <img src="../${r.image_url}" alt="${r.name.en}" class="w-full h-full object-cover" />
       </figure>
       <div class="p-4 text-center">
         <h3 class="text-lg mb-1">${r.name.en}</h3>
@@ -27,7 +27,7 @@ function renderProduct(p) {
     .replaceAll('{{full_desc_en}}', p.full_desc.en)
     .replaceAll('{{ingredients_en_li}}', li(p.ingredients.en))
     .replaceAll('{{benefits_en_li}}', li(p.benefits.en))
-    .replaceAll('{{image_url}}', p.image_url)
+  .replaceAll('{{image_url}}', `../${p.image_url}`)
     .replaceAll('{{id}}', p.id)
     .replaceAll('{{related_cards}}', related);
 }

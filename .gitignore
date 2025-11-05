@@ -28,7 +28,7 @@ Thumbs.db
 *.log
 
 # Generated assets
-qrcodes/
+# qrcodes/
 
 # Misc
 *.local

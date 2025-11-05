@@ -4,7 +4,7 @@
   
   async function loadProducts() {
     if (!products) {
-      products = await (await fetch("/data/products.json")).json();
+      products = await (await fetch("data/products.json")).json();
     }
     return products;
   }
@@ -15,7 +15,7 @@
     if (!grid) return;
     
     grid.innerHTML = products.map(p => `
-      <a href="/products/${p.id}.html" class="card group overflow-hidden focus:outline-none focus:ring-2 focus:ring-accent/50 shine">
+      <a href="products/${p.id}.html" class="card group overflow-hidden focus:outline-none focus:ring-2 focus:ring-accent/50 shine">
         <figure class="aspect-[4/5] overflow-hidden product-figure">
           <img src="${p.image_url}" alt="${p.name[lang]}" class="w-full h-full object-cover"/>
         </figure>
