@@ -1,0 +1,22 @@
+{
+  "name": "aurielle-cosmetics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Premium bilingual cosmetics brand landing page (static) with Node build scripts for product pages and QR codes.",
+  "scripts": {
+    "build": "node scripts/generate-qr.js && node scripts/build.js && npx tailwindcss -i src/styles.css -o dist/assets/styles.css --minify && node scripts/copy-static.js",
+    "dev": "npm run build && npx live-server dist --port=8080 --open=/index.html",
+    "watch": "node scripts/generate-qr.js && node scripts/build.js && npx tailwindcss -i src/styles.css -o dist/assets/styles.css --watch",
+    "build:prod": "node scripts/generate-qr.js && node scripts/build.js && npx tailwindcss -i src/styles.css -o dist/assets/styles.css --minify && node scripts/copy-static.js",
+    "deploy:gh": "npm run build:prod && npx gh-pages -d dist"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.41",
+    "qrcode": "^1.5.4",
+    "tailwindcss": "^3.4.10",
+    "@tailwindcss/typography": "^0.5.15",
+    "gh-pages": "^6.1.1"
+  }
+}

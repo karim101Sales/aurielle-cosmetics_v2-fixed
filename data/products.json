@@ -1,0 +1,166 @@
+[
+  {
+    "id": "velour-lip-veil",
+    "name": {
+      "en": "Velour Lip Veil",
+      "ar": "حجاب الشفاه المخملي"
+    },
+    "price": 48.0,
+    "description": {
+      "en": "Featherweight velvet-matte color.",
+      "ar": "لون مخملي خفيف كالريش."
+    },
+    "full_desc": {
+      "en": "A couture lipstick with a cloud-soft glide and velvet-matte finish that wears comfortably for up to 12 hours.",
+      "ar": "أحمر شفاه فاخر بملمس سحابي وإنهاء مخملي يدوم براحة حتى 12 ساعة."
+    },
+    "ingredients": {
+      "en": [
+        "Rosehip Oil",
+        "Squalane",
+        "Vitamin E"
+      ],
+      "ar": [
+        "زيت ثمر الورد",
+        "سكوالان",
+        "فيتامين هـ"
+      ]
+    },
+    "benefits": {
+      "en": [
+        "Blurs lines",
+        "Nourishes",
+        "Non-drying"
+      ],
+      "ar": [
+        "يخفي الخطوط",
+        "يغذي",
+        "غير مُجفّف"
+      ]
+    },
+    "image_url": "images/velour-lip-veil.webp"
+  },
+  {
+    "id": "lumiere-skin-serum",
+    "name": {
+      "en": "Lumière Skin Serum",
+      "ar": "سيروم لوميير للبشرة"
+    },
+    "price": 120.0,
+    "description": {
+      "en": "Radiance-boosting, fast-absorbing.",
+      "ar": "يعزز الإشراق وسريع الامتصاص."
+    },
+    "full_desc": {
+      "en": "A silk-light serum with stabilized Vitamin C and white peony to visibly brighten and even tone.",
+      "ar": "سيروم بخفة الحرير مع فيتامين سي مستقر وعود الفاوانيا البيضاء لتفتيح وتوحيد اللون."
+    },
+    "ingredients": {
+      "en": [
+        "Vitamin C (THD)",
+        "White Peony",
+        "Hyaluronic Acid"
+      ],
+      "ar": [
+        "فيتامين سي (THD)",
+        "الفاوانيا البيضاء",
+        "حمض الهيالورونيك"
+      ]
+    },
+    "benefits": {
+      "en": [
+        "Brightens",
+        "Evens tone",
+        "Hydrates"
+      ],
+      "ar": [
+        "يفتح",
+        "يوحّد اللون",
+        "يرطب"
+      ]
+    },
+    "image_url": "images/lumiere-skin-serum.webp"
+  },
+  {
+    "id": "noir-kajal-ink",
+    "name": {
+      "en": "Noir Kajal Ink",
+      "ar": "كحل مداد الأسود"
+    },
+    "price": 34.0,
+    "description": {
+      "en": "Ultra-precise, smudge-proof.",
+      "ar": "دقة فائقة ومقاوم للتلطخ."
+    },
+    "full_desc": {
+      "en": "A gel-ink kajal that delivers deep, inky definition with a creamy glide and 24-hour hold.",
+      "ar": "كحل بتركيبة حبرية يمنح تحديداً عميقاً مع انزلاق كريمي وثبات 24 ساعة."
+    },
+    "ingredients": {
+      "en": [
+        "Carnauba Wax",
+        "Silicone Resin",
+        "Black Iron Oxide"
+      ],
+      "ar": [
+        "شمع الكرناوبا",
+        "راتنج سيليكون",
+        "أكسيد الحديد الأسود"
+      ]
+    },
+    "benefits": {
+      "en": [
+        "24h wear",
+        "Water-resistant",
+        "Intense pigment"
+      ],
+      "ar": [
+        "ثبات 24 ساعة",
+        "مقاوم للماء",
+        "صبغة مكثفة"
+      ]
+    },
+    "image_url": "images/noir-kajal-ink.webp"
+  },
+  {
+    "id": "opal-glow-highlighter",
+    "name": {
+      "en": "Opal Glow Highlighter",
+      "ar": "هايلايتر توهّج الأوبال"
+    },
+    "price": 46.0,
+    "description": {
+      "en": "Sheer, glass-skin radiance.",
+      "ar": "إشراقة شفافة كالبشرة الزجاجية."
+    },
+    "full_desc": {
+      "en": "A balmy powder highlighter that melts into skin for a soft, lit-from-within glow.",
+      "ar": "هايلايتر بمسحوق بلسم يندمج مع البشرة لإضاءة ناعمة من الداخل."
+    },
+    "ingredients": {
+      "en": [
+        "Mica",
+        "Shea Butter",
+        "Squalane"
+      ],
+      "ar": [
+        "ميكا",
+        "زبدة الشيا",
+        "سكوالان"
+      ]
+    },
+    "benefits": {
+      "en": [
+        "Glass-skin effect",
+        "Non-glittery",
+        "Buildable"
+      ],
+      "ar": [
+        "تأثير البشرة الزجاجية",
+        "بدون وميض",
+        "قابل للتعزيز"
+      ]
+    },
+    "image_url": "images/opal-glow-highlighter.webp"
+  }
+]

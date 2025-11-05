@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title data-i18n="meta_contact">Aurielle — Contact</title>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2b2a33" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/icons/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script defer src="/src/i18n.js"></script>
+  <script defer src="/src/main.js"></script>
+
+</head>
+<body class="min-h-screen bg-luxe-gradient text-pearl">
+  
+<header class="fixed top-0 inset-x-0 z-50">
+  <div class="glass mx-auto max-w-7xl mt-4 rounded-2xl px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+    <a href="/index.html" class="flex items-center gap-3" aria-label="Aurielle Home">
+      <img src="./assets/logo.svg" alt="Aurielle logo" class="h-8 w-auto" />
+      <span class="text-pearl font-semibold tracking-widest" data-i18n="brand">AURIELLE</span>
+    </a>
+    <nav class="flex items-center gap-4">
+      <button id="mobileMenuBtn" class="md:hidden btn-ghost" aria-expanded="false" aria-controls="mobileMenu" data-i18n="nav_menu">Menu</button>
+      <ul class="hidden md:flex items-center gap-6 text-pearl/90">
+        <li><a class="hover:text-pearl" data-i18n="nav_products" href="/index.html#products">Products</a></li>
+        <li><a class="hover:text-pearl" data-i18n="nav_about" href="/about.html">About</a></li>
+        <li><a class="hover:text-pearl" data-i18n="nav_contact" href="/contact.html">Contact</a></li>
+        <li class="relative">
+          <button id="langToggle" class="btn-ghost px-3 py-2" aria-haspopup="listbox" aria-expanded="false">
+            <span data-i18n="switch_lang">العربية</span>
+          </button>
+          <ul id="langMenu" class="hidden absolute right-0 mt-2 w-40 glass rounded-xl p-2">
+            <li><button class="w-full text-left px-3 py-2 hover:text-pearl" data-lang="en">English</button></li>
+            <li><button class="w-full text-left px-3 py-2 hover:text-pearl" data-lang="ar">العربية</button></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden mx-4 mt-2 glass rounded-2xl p-4">
+    <ul class="flex flex-col gap-3 text-pearl/90">
+      <li><a class="hover:text-pearl" data-i18n="nav_products" href="/index.html#products">Products</a></li>
+      <li><a class="hover:text-pearl" data-i18n="nav_about" href="/about.html">About</a></li>
+      <li><a class="hover:text-pearl" data-i18n="nav_contact" href="/contact.html">Contact</a></li>
+      <li class="flex gap-2">
+        <button class="btn-ghost flex-1" data-set-lang="en">English</button>
+        <button class="btn-ghost flex-1" data-set-lang="ar">العربية</button>
+      </li>
+    </ul>
+  </div>
+</header>
+
+  <main class="pt-28 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <section class="card p-6">
+      <h1 class="text-2xl mb-4" data-i18n="contact_title">Get in touch</h1>
+      <form class="grid gap-4" action="https://formspree.io/f/xnqekwaj" method="POST">
+        <label class="grid gap-2">
+          <span data-i18n="email_label">Email</span>
+          <input type="email" name="email" required class="rounded-xl px-4 py-3 bg-white/5 border border-white/15 focus:outline-none focus:ring-2 focus:ring-accent/50" data-i18n-attr="placeholder:email_placeholder" placeholder="you@example.com" />
+        </label>
+        <label class="grid gap-2">
+          <span data-i18n="message_label">Message</span>
+          <textarea name="message" required rows="5" class="rounded-xl px-4 py-3 bg-white/5 border border-white/15 focus:outline-none focus:ring-2 focus:ring-accent/50" data-i18n-attr="placeholder:message_placeholder" placeholder="Hello Aurielle..."></textarea>
+        </label>
+        <div class="flex flex-wrap gap-3">
+          <button type="submit" class="btn-primary" data-i18n="send">Send</button>
+          <a href="https://wa.me/15551234567" class="btn-ghost" target="_blank" rel="noreferrer" data-i18n="whatsapp">Chat on WhatsApp</a>
+          <button type="button" id="copyEmail" class="btn-ghost" data-email="press@aurielle.co" data-i18n="copy_email">Copy Email</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  
+<footer class="mt-24 border-t border-white/10 py-10 text-center text-pearl/70">
+  <div class="flex justify-center gap-6 mb-4">
+    <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer" class="hover:text-pearl">Instagram</a>
+    <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noreferrer" class="hover:text-pearl">TikTok</a>
+    <a href="https://pinterest.com" aria-label="Pinterest" target="_blank" rel="noreferrer" class="hover:text-pearl">Pinterest</a>
+  </div>
+  <p class="text-sm">&copy; <span id="year"></span> <span data-i18n="brand">Aurielle</span>. <span data-i18n="copyright">All rights reserved.</span></p>
+  <button id="backToTop" class="mt-4 btn-ghost" aria-label="Back to top" data-i18n="back_to_top">Back to top</button>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="40" viewBox="0 0 180 40" fill="none" role="img" aria-label="Aurielle logo">
+  <rect rx="8" width="180" height="40" fill="url(#g)"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="180" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2b2a33"/>
+      <stop offset="1" stop-color="#c8a27a"/>
+    </linearGradient>
+  </defs>
+  <text x="90" y="26" text-anchor="middle" font-family="serif" font-size="20" fill="#f6f5f3" letter-spacing="2">
+    AURIELLE
+  </text>
+</svg>

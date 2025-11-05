@@ -1,0 +1,40 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+coverage/
+.parcel-cache/
+.next/
+.cache/
+
+# Environment
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Generated assets
+qrcodes/
+
+# Misc
+*.local
+*.bak
+*.tmp
+*.swp
+
+# Lockfiles (keep package-lock if you intentionally track it, otherwise ignore)
+# package-lock.json
