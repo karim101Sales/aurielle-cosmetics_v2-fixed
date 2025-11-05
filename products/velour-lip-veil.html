@@ -36,9 +36,9 @@
 
   <main class="pt-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
     <article class="grid md:grid-cols-2 gap-10">
-      <figure class="card overflow-hidden product-figure">
-  <img src="../images/velour-lip-veil.webp" alt="Velour Lip Veil image" class="w-full h-full object-cover" />
-      </figure>
+    <figure class="card overflow-hidden product-figure">
+  <img id="pImage" src="../images/velour-lip-veil.webp" alt="Velour Lip Veil image" class="w-full h-full object-cover" />
+    </figure>
       <section>
         <h1 class="text-3xl md:text-4xl mb-3" id="pName">Velour Lip Veil</h1>
         <p class="text-pearl/80 mb-6" id="pDesc">A couture lipstick with a cloud-soft glide and velvet-matte finish that wears comfortably for up to 12 hours.</p>
@@ -60,7 +60,7 @@
 
         <div class="mt-6 flex items-center gap-3">
           <a class="btn-ghost" id="shareBtn" href="#" aria-label="Share this product" data-i18n="share">Share</a>
-          <img src="../qrcodes/velour-lip-veil.png" alt="QR code to this product" class="h-16 w-16 rounded-lg border border-white/20" />
+          <img id="pQr" src="../qrcodes/velour-lip-veil.png" alt="QR code to this product" class="h-16 w-16 rounded-lg border border-white/20" />
         </div>
       </section>
     </article>
@@ -106,6 +106,6 @@
   <footer class="mt-24 border-t border-white/10 py-10 text-center text-pearl/70">
     <p class="text-sm">&copy; <span id="year"></span> <span data-i18n="brand">Aurielle</span>. <span data-i18n="copyright">All rights reserved.</span></p>
   </footer>
-  <script defer src="src/product.js"></script>
+  <script defer src="../src/product.js"></script>
 </body>
 </html>

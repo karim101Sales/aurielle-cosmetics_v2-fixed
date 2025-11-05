@@ -31,14 +31,17 @@
     if(pIngredients) pIngredients.innerHTML = prod.ingredients[lang].map(i => `<li>${i}</li>`).join("");
     if(pBenefits) pBenefits.innerHTML = prod.benefits[lang].map(i => `<li>${i}</li>`).join("");
     
-    // Handle related products translations
-    const relatedSection = document.querySelector('section:has(h2[data-i18n="related"])');
-    if (relatedSection) {
-      const relatedCards = relatedSection.querySelectorAll('.card');
+    // Handle related products translations (avoid :has selector for broader support)
+    const relatedHeading = document.querySelector('h2[data-i18n="related"]');
+    if (relatedHeading) {
+      const relatedContainer = relatedHeading.nextElementSibling || relatedHeading.parentElement?.querySelector('.grid');
+      const relatedCards = relatedContainer ? relatedContainer.querySelectorAll('.card') : [];
       relatedCards.forEach(card => {
         const titleEl = card.querySelector('h3');
         const descEl = card.querySelector('p');
-        const productId = card.getAttribute('href')?.split('/')?.pop()?.replace('.html', '');
+        // related link is a sibling file like 'velour-lip-veil.html' or just the id.html
+        const href = card.getAttribute('href') || card.querySelector('a')?.getAttribute('href');
+        const productId = href?.split('/')?.pop()?.replace('.html', '');
         if (productId) {
           const relatedProduct = products.find(p => p.id === productId);
           if (relatedProduct) {
