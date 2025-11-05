@@ -3,15 +3,19 @@
   let products = null;
   const pathParts = location.pathname.split("/");
   const file = pathParts[pathParts.length - 1].replace(".html", "");
+  function getBase() {
+    return location.pathname.includes('/products/') ? '../' : '';
+  }
+
   async function loadProducts(){
-    if(!products) products = await (await fetch("data/products.json")).json();
+    if(!products) products = await (await fetch(getBase() + "data/products.json")).json();
     return products;
   }
   async function render(lang){
     const products = await loadProducts();
     const prod = products.find(p => p.id === file);
     if (!prod) return;
-  const tAll = await (await fetch("data/translations.json")).json();
+  const tAll = await (await fetch(getBase() + "data/translations.json")).json();
     const t = tAll[lang] || tAll.en;
     // Name / desc
     const pName = document.getElementById('pName');
@@ -51,14 +55,9 @@
     if(pBenefits) pBenefits.innerHTML = prod.benefits[lang].map(i => `<li>${i}</li>`).join("");
     if(pPrice) pPrice.textContent = `$${prod.price.toFixed(2)}`;
     // set image - use relative path so works in various hosting setups
-    if(pImage) {
-      const imgPath = location.pathname.includes('/products/') ? `../${prod.image_url}` : prod.image_url;
-      pImage.setAttribute('src', imgPath);
-    }
-    if(pQr) {
-      const qrPath = location.pathname.includes('/products/') ? `../qrcodes/${prod.id}.png` : `qrcodes/${prod.id}.png`;
-      pQr.setAttribute('src', qrPath);
-    }
+    const base = getBase();
+    if(pImage) pImage.setAttribute('src', base + prod.image_url);
+    if(pQr) pQr.setAttribute('src', base + `qrcodes/${prod.id}.png`);
 
     // Meta title
     document.title = `${prod.name[lang]} ${t.product_meta_suffix}`;

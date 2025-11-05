@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
       copyBtn.textContent = (localStorage.getItem('lang') || 'en') === 'ar' ? 'تم النسخ' : 'Copied';
       setTimeout(() => {
         // Re-apply translations to restore original label
-        fetch('data/translations.json').then(r=>r.json()).then(all=>{
+        const base = location.pathname.includes('/products/') ? '../' : '';
+        fetch(base + 'data/translations.json').then(r=>r.json()).then(all=>{
           const l = localStorage.getItem('lang') || 'en';
           copyBtn.textContent = all[l].copy_email;
         });

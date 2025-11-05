@@ -4,7 +4,8 @@ window.AurielleI18n = (function () {
   let current = 'en';
 
   async function loadTranslations() {
-    const res = await fetch('data/translations.json');
+    const base = location.pathname.includes('/products/') ? '../' : '';
+    const res = await fetch(`${base}data/translations.json`);
     const all = await res.json();
     return all;
   }
@@ -76,6 +77,15 @@ window.AurielleI18n = (function () {
         await setLanguage(btn.getAttribute('data-lang'));
         menu.classList.add('hidden');
       });
+    });
+    // Fallback: delegated listener so clicks on dynamically rendered buttons still work (covers product pages)
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest && e.target.closest('[data-lang]');
+      if (btn) {
+        // prevent double-handling if menu listener already handled it
+        setLanguage(btn.getAttribute('data-lang'));
+        document.getElementById('langMenu')?.classList.add('hidden');
+      }
     });
     // Mobile quick set
     document.querySelectorAll('[data-set-lang]').forEach(b => {
