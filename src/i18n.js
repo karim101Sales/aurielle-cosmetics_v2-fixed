@@ -4,7 +4,7 @@ window.AurielleI18n = (function () {
   let current = 'en';
 
   async function loadTranslations() {
-    const res = await fetch('/data/translations.json');
+    const res = await fetch('data/translations.json');
     const all = await res.json();
     return all;
   }

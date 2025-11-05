@@ -4,14 +4,14 @@
   const pathParts = location.pathname.split("/");
   const file = pathParts[pathParts.length - 1].replace(".html", "");
   async function loadProducts(){
-    if(!products) products = await (await fetch("/data/products.json")).json();
+    if(!products) products = await (await fetch("data/products.json")).json();
     return products;
   }
   async function render(lang){
     const products = await loadProducts();
     const prod = products.find(p => p.id === file);
     if (!prod) return;
-    const tAll = await (await fetch("/data/translations.json")).json();
+  const tAll = await (await fetch("data/translations.json")).json();
     const t = tAll[lang] || tAll.en;
     // Name / desc
     const pName = document.getElementById('pName');
@@ -51,8 +51,8 @@
     if(pBenefits) pBenefits.innerHTML = prod.benefits[lang].map(i => `<li>${i}</li>`).join("");
     if(pPrice) pPrice.textContent = `$${prod.price.toFixed(2)}`;
     // set image - use relative path so works in various hosting setups
-    if(pImage) pImage.setAttribute('src', prod.image_url);
-    if(pQr) pQr.setAttribute('src', `/qrcodes/${prod.id}.png`);
+  if(pImage) pImage.setAttribute('src', prod.image_url);
+  if(pQr) pQr.setAttribute('src', `qrcodes/${prod.id}.png`);
 
     // Meta title
     document.title = `${prod.name[lang]} ${t.product_meta_suffix}`;
