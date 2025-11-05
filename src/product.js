@@ -51,8 +51,14 @@
     if(pBenefits) pBenefits.innerHTML = prod.benefits[lang].map(i => `<li>${i}</li>`).join("");
     if(pPrice) pPrice.textContent = `$${prod.price.toFixed(2)}`;
     // set image - use relative path so works in various hosting setups
-  if(pImage) pImage.setAttribute('src', prod.image_url);
-  if(pQr) pQr.setAttribute('src', `qrcodes/${prod.id}.png`);
+    if(pImage) {
+      const imgPath = location.pathname.includes('/products/') ? `../${prod.image_url}` : prod.image_url;
+      pImage.setAttribute('src', imgPath);
+    }
+    if(pQr) {
+      const qrPath = location.pathname.includes('/products/') ? `../qrcodes/${prod.id}.png` : `qrcodes/${prod.id}.png`;
+      pQr.setAttribute('src', qrPath);
+    }
 
     // Meta title
     document.title = `${prod.name[lang]} ${t.product_meta_suffix}`;
