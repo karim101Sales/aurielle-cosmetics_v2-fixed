@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>{{name_key}} {{product_meta_suffix}}</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script defer src="/src/i18n.js"></script>
+  <script defer src="/src/main.js"></script>
+</head>
+<body class="min-h-screen bg-luxe-gradient text-pearl">
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="glass mx-auto max-w-7xl mt-4 rounded-2xl px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-3" aria-label="Aurielle Home">
+        <img src="/assets/logo.svg" alt="Aurielle logo" class="h-8 w-auto" />
+        <span class="text-pearl font-semibold tracking-widest" data-i18n="brand">AURIELLE</span>
+      </a>
+      <nav>
+        <ul class="hidden md:flex items-center gap-6 text-pearl/90">
+          <li><a class="hover:text-pearl" data-i18n="nav_products" href="/index.html#products">Products</a></li>
+          <li><a class="hover:text-pearl" data-i18n="nav_about" href="/about.html">About</a></li>
+          <li><a class="hover:text-pearl" data-i18n="nav_contact" href="/contact.html">Contact</a></li>
+          <li class="relative">
+            <button id="langToggle" class="btn-ghost px-3 py-2" aria-haspopup="listbox" aria-expanded="false">
+              <span data-i18n="switch_lang">العربية</span>
+            </button>
+            <ul id="langMenu" class="hidden absolute right-0 mt-2 w-40 glass rounded-xl p-2">
+              <li><button class="w-full text-left px-3 py-2 hover:text-pearl" data-lang="en">English</button></li>
+              <li><button class="w-full text-left px-3 py-2 hover:text-pearl" data-lang="ar">العربية</button></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <article class="grid md:grid-cols-2 gap-10">
+      <figure class="card overflow-hidden product-figure">
+        <img src="/images/velour-lip-veil.webp" alt="Velour Lip Veil image" class="w-full h-full object-cover" />
+      </figure>
+      <section>
+        <h1 class="text-3xl md:text-4xl mb-3" id="pName">Velour Lip Veil</h1>
+        <p class="text-pearl/80 mb-6" id="pDesc">A couture lipstick with a cloud-soft glide and velvet-matte finish that wears comfortably for up to 12 hours.</p>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="card p-4">
+            <h2 class="font-semibold mb-2" data-i18n="ingredients">Ingredients</h2>
+            <ul id="pIngredients">
+              <li>Rosehip Oil</li><li>Squalane</li><li>Vitamin E</li>
+            </ul>
+          </div>
+          <div class="card p-4">
+            <h2 class="font-semibold mb-2" data-i18n="benefits">Benefits</h2>
+            <ul id="pBenefits">
+              <li>Blurs lines</li><li>Nourishes</li><li>Non-drying</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-6 flex items-center gap-3">
+          <a class="btn-ghost" id="shareBtn" href="#" aria-label="Share this product" data-i18n="share">Share</a>
+          <img src="/qrcodes/velour-lip-veil.png" alt="QR code to this product" class="h-16 w-16 rounded-lg border border-white/20" />
+        </div>
+      </section>
+    </article>
+
+    <section class="mt-16">
+      <h2 class="text-xl mb-4" data-i18n="related">Related</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+    <a href="/products/lumiere-skin-serum.html" class="card overflow-hidden">
+      <figure class="aspect-[4/5] overflow-hidden product-figure">
+        <img src="/images/lumiere-skin-serum.webp" alt="Lumière Skin Serum" class="w-full h-full object-cover" />
+      </figure>
+      <div class="p-4 text-center">
+        <h3 class="text-lg mb-1">Lumière Skin Serum</h3>
+        <p class="text-pearl/70 text-sm">Radiance-boosting, fast-absorbing.</p>
+      </div>
+    </a>
+  
+    <a href="/products/noir-kajal-ink.html" class="card overflow-hidden">
+      <figure class="aspect-[4/5] overflow-hidden product-figure">
+        <img src="/images/noir-kajal-ink.webp" alt="Noir Kajal Ink" class="w-full h-full object-cover" />
+      </figure>
+      <div class="p-4 text-center">
+        <h3 class="text-lg mb-1">Noir Kajal Ink</h3>
+        <p class="text-pearl/70 text-sm">Ultra-precise, smudge-proof.</p>
+      </div>
+    </a>
+  
+    <a href="/products/opal-glow-highlighter.html" class="card overflow-hidden">
+      <figure class="aspect-[4/5] overflow-hidden product-figure">
+        <img src="/images/opal-glow-highlighter.webp" alt="Opal Glow Highlighter" class="w-full h-full object-cover" />
+      </figure>
+      <div class="p-4 text-center">
+        <h3 class="text-lg mb-1">Opal Glow Highlighter</h3>
+        <p class="text-pearl/70 text-sm">Sheer, glass-skin radiance.</p>
+      </div>
+    </a>
+  
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-24 border-t border-white/10 py-10 text-center text-pearl/70">
+    <p class="text-sm">&copy; <span id="year"></span> <span data-i18n="brand">Aurielle</span>. <span data-i18n="copyright">All rights reserved.</span></p>
+  </footer>
+  <script defer src="/src/product.js"></script>
+</body>
+</html>
