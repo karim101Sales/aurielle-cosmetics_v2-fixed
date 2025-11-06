@@ -1,45 +1,69 @@
 [
-  {
-    "id": "velour-lip-veil",
-    "name": {
-      "en": "Velour Lip Veil",
-      "ar": " الشفاه المخملي"
-    },
-    "price": 48.0,
-    "description": {
-      "en": "Featherweight velvet-matte color.",
-      "ar": "لون  خفيف كالريش."
-    },
-    "full_desc": {
-      "en": "A couture lipstick with a cloud-soft glide and velvet-matte finish that wears comfortably for up to 12 hours.",
-      "ar": "أحمر شفاه فاخر بملمس سحابي وإنهاء مخملي يدوم براحة حتى 12 ساعة."
-    },
-    "ingredients": {
-      "en": [
-        "Rosehip Oil",
-        "Squalane",
-        "Vitamin E"
-      ],
-      "ar": [
-        "زيت ثمر الورد",
-        "سكوالان",
-        "فيتامين هـ"
-      ]
-    },
-    "benefits": {
-      "en": [
-        "Blurs lines",
-        "Nourishes",
-        "Non-drying"
-      ],
-      "ar": [
-        "يخفي الخطوط",
-        "يغذي",
-        "غير مُجفّف"
-      ]
-    },
-    "image_url": "images/velour-lip-veil.webp"
+ {
+  "id": "easy-clean-care-antibacterial-hand-soap-lemon-mint",
+  "name": {
+    "en": "Hand Soap - Easy Clean Care Antibacterial, Lemon & Mint",
+    "ar": "صابون سائل لليدين مضاد للبكتيريا إيزي كلين، بالليمون والنعناع"
   },
+  "price": 40.0,
+  "description": {
+    "en": "Antibacterial Hand Soap with Lemon & Mint Scent.",
+    "ar": "صابون سائل لليدين مضاد للبكتيريا برائحة الليمون والنعناع."
+  },
+  "full_desc": {
+    "en": "Easy Clean Care Antibacterial Hand Soap gently cleans and soothes your hands while fighting the germs that cause infections. It features a refreshing Lemon & Mint perfume. Apply on wet hands and rinse thoroughly. For external use only. Keep away from direct sunlight, store below 30°C.",
+    "ar": "صابون اليدين المضاد للبكتيريا إيزي كلين كير ينظف ويهدئ اليدين بلطف بينما يقضي على الجراثيم المسببة للأمراض. يتميز برائحة الليمون والنعناع المنعشة. للاستخدام: يوضع على الأيدي المبللة ويشطف جيداً. للاستخدام الخارجي فقط. يحفظ بعيداً عن أشعة الشمس المباشرة، ويخزن في درجة حرارة أقل من 30 مئوية."
+  },
+  "ingredients": {
+    "en": [
+      "Myristyl Cetearate",
+      "Propylene Glycol",
+      "Sodium Laureth Sulfate",
+      "Cocamide DEA",
+      "Glycerin",
+      "Sodium Lauryl Ether Sulfate",
+      "Glycol Distearate",
+      "Cocamidopropyl Betaine",
+      "Panthenol",
+      "EDTA",
+      "Citric Acid",
+      "Sodium Chloride",
+      "Lemon & Mint Perfume",
+      "Aqua"
+    ],
+    "ar": [
+      "ميريستيل سيتاريث",
+      "بروبيلين جليكول",
+      "صوديوم لوريث سلفات",
+      "كوكاميد داي إيثانولامين (DEA)",
+      "جليسرين",
+      "صوديوم لوريل إيثر سلفات",
+      "جليكول ديستيرات",
+      "كوكاميدوبروبيل بيتين",
+      "بانثينول",
+      "إي دي تي إيه (EDTA)",
+      "حمض الستريك",
+      "كلوريد الصوديوم",
+      "عطر الليمون والنعناع",
+      "ماء"
+    ]
+  },
+  "benefits": {
+    "en": [
+      "Antibacterial cleaning",
+      "Gently cleanses and soothes hands",
+      "Fights infection-causing germs",
+      "Refreshing Lemon & Mint scent"
+    ],
+    "ar": [
+      "تنظيف مضاد للبكتيريا",
+      "ينظف ويهدئ اليدين بلطف",
+      "يقضي على الجراثيم المسببة للأمراض",
+      "رائحة الليمون والنعناع المنعشة"
+    ]
+  },
+  "image_url": "images/easy-clean-care-antibacterial-hand-soap-lemon-mint.jpg"
+},
   {
     "id": "lumiere-skin-serum",
     "name": {
